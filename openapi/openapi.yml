@@ -1,0 +1,309 @@
+openapi: 3.1.0
+info:
+  title: Google Content API for Shopping
+  description: >-
+    The Content API for Shopping allows apps to interact directly with the Google
+    Merchant Center platform, enabling management of product listings, account
+    information, data feeds, inventory, orders, and promotions. It provides
+    programmatic access to create, update, and delete products, manage shipping
+    and tax settings, handle order workflows, and access reporting data.
+  version: 2.1.0
+  contact:
+    name: Google Shopping
+    url: https://developers.google.com/shopping-content
+  license:
+    name: Google APIs Terms of Service
+    url: https://developers.google.com/terms
+externalDocs:
+  description: Content API for Shopping Documentation
+  url: https://developers.google.com/shopping-content/guides/quickstart
+servers:
+  - url: https://shoppingcontent.googleapis.com/content/v2.1
+    description: Content API for Shopping v2.1 Server
+tags:
+  - name: Products
+    description: Manage product listings
+  - name: Accounts
+    description: Manage merchant accounts
+  - name: Orders
+    description: Manage orders
+  - name: Datafeeds
+    description: Manage data feeds
+  - name: Inventory
+    description: Manage local and regional inventory
+paths:
+  /{merchantId}/products:
+    get:
+      operationId: listProducts
+      summary: List Products
+      description: Lists the products in the specified merchant account.
+      tags:
+        - Products
+      parameters:
+        - name: merchantId
+          in: path
+          required: true
+          description: The ID of the merchant account.
+          schema:
+            type: string
+        - name: maxResults
+          in: query
+          description: Maximum number of products to return.
+          schema:
+            type: integer
+        - name: pageToken
+          in: query
+          description: Token for pagination.
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response with product list.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProductsListResponse'
+    post:
+      operationId: insertProduct
+      summary: Insert Product
+      description: Uploads a product to the specified merchant account.
+      tags:
+        - Products
+      parameters:
+        - name: merchantId
+          in: path
+          required: true
+          description: The ID of the merchant account.
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Product'
+      responses:
+        '200':
+          description: Successful product insertion.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+  /{merchantId}/products/{productId}:
+    get:
+      operationId: getProduct
+      summary: Get Product
+      description: Retrieves a product from the merchant account.
+      tags:
+        - Products
+      parameters:
+        - name: merchantId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: productId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response with product details.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+    delete:
+      operationId: deleteProduct
+      summary: Delete Product
+      description: Deletes a product from the merchant account.
+      tags:
+        - Products
+      parameters:
+        - name: merchantId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: productId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Product successfully deleted.
+  /{merchantId}/accounts:
+    get:
+      operationId: listAccounts
+      summary: List Accounts
+      description: Lists the sub-accounts in a multi-client account.
+      tags:
+        - Accounts
+      parameters:
+        - name: merchantId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response with account list.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccountsListResponse'
+  /{merchantId}/orders:
+    get:
+      operationId: listOrders
+      summary: List Orders
+      description: Lists the orders in the specified merchant account.
+      tags:
+        - Orders
+      parameters:
+        - name: merchantId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response with order list.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OrdersListResponse'
+  /{merchantId}/datafeeds:
+    get:
+      operationId: listDatafeeds
+      summary: List Datafeeds
+      description: Lists the data feeds in the specified merchant account.
+      tags:
+        - Datafeeds
+      parameters:
+        - name: merchantId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response with datafeed list.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DatafeedsListResponse'
+components:
+  schemas:
+    Product:
+      type: object
+      properties:
+        id:
+          type: string
+          description: REST ID of the product.
+        offerId:
+          type: string
+          description: Unique identifier for the product in the merchant's store.
+        title:
+          type: string
+          description: Title of the product.
+        description:
+          type: string
+          description: Description of the product.
+        link:
+          type: string
+          format: uri
+          description: URL to the product page.
+        imageLink:
+          type: string
+          format: uri
+          description: URL of the product image.
+        contentLanguage:
+          type: string
+          description: The two-letter language code for the product.
+        targetCountry:
+          type: string
+          description: The CLDR territory code for the product's target country.
+        channel:
+          type: string
+          enum:
+            - online
+            - local
+          description: The channel of the product (online or local).
+        availability:
+          type: string
+          description: Availability status of the product.
+        condition:
+          type: string
+          enum:
+            - new
+            - refurbished
+            - used
+        price:
+          $ref: '#/components/schemas/Price'
+        brand:
+          type: string
+          description: Brand of the product.
+        gtin:
+          type: string
+          description: Global Trade Item Number.
+        mpn:
+          type: string
+          description: Manufacturer Part Number.
+        googleProductCategory:
+          type: string
+          description: Google product category.
+    Price:
+      type: object
+      properties:
+        value:
+          type: string
+          description: The price value.
+        currency:
+          type: string
+          description: The currency code (ISO 4217).
+    ProductsListResponse:
+      type: object
+      properties:
+        kind:
+          type: string
+        nextPageToken:
+          type: string
+        resources:
+          type: array
+          items:
+            $ref: '#/components/schemas/Product'
+    AccountsListResponse:
+      type: object
+      properties:
+        kind:
+          type: string
+        nextPageToken:
+          type: string
+        resources:
+          type: array
+          items:
+            type: object
+    OrdersListResponse:
+      type: object
+      properties:
+        kind:
+          type: string
+        nextPageToken:
+          type: string
+        resources:
+          type: array
+          items:
+            type: object
+    DatafeedsListResponse:
+      type: object
+      properties:
+        kind:
+          type: string
+        nextPageToken:
+          type: string
+        resources:
+          type: array
+          items:
+            type: object

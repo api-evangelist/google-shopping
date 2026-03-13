@@ -1,0 +1,53 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "gshopping": "https://developers.google.com/shopping-content/reference/rest/v2.1/",
+    "Product": "https://schema.org/Product",
+    "Offer": "https://schema.org/Offer",
+    "offerId": {
+      "@id": "gshopping:offerId",
+      "@type": "xsd:string"
+    },
+    "title": {
+      "@id": "https://schema.org/name",
+      "@type": "xsd:string"
+    },
+    "description": {
+      "@id": "https://schema.org/description",
+      "@type": "xsd:string"
+    },
+    "link": {
+      "@id": "https://schema.org/url",
+      "@type": "@id"
+    },
+    "imageLink": {
+      "@id": "https://schema.org/image",
+      "@type": "@id"
+    },
+    "price": {
+      "@id": "https://schema.org/price",
+      "@type": "xsd:string"
+    },
+    "priceCurrency": {
+      "@id": "https://schema.org/priceCurrency",
+      "@type": "xsd:string"
+    },
+    "brand": {
+      "@id": "https://schema.org/brand",
+      "@type": "xsd:string"
+    },
+    "gtin": {
+      "@id": "https://schema.org/gtin",
+      "@type": "xsd:string"
+    },
+    "availability": {
+      "@id": "https://schema.org/availability",
+      "@type": "xsd:string"
+    },
+    "condition": {
+      "@id": "https://schema.org/itemCondition",
+      "@type": "xsd:string"
+    },
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  }
+}

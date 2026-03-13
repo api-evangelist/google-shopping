@@ -1,0 +1,111 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/google-shopping/refs/heads/main/json-schema/google-shopping.json",
+  "title": "Google Content API for Shopping Schema",
+  "description": "JSON Schema for the Google Content API for Shopping product and related objects.",
+  "type": "object",
+  "$defs": {
+    "Product": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "REST ID of the product."
+        },
+        "offerId": {
+          "type": "string",
+          "description": "Unique product identifier in the merchant's store."
+        },
+        "title": {
+          "type": "string",
+          "description": "Title of the product."
+        },
+        "description": {
+          "type": "string",
+          "description": "Description of the product."
+        },
+        "link": {
+          "type": "string",
+          "format": "uri",
+          "description": "URL to the product page."
+        },
+        "imageLink": {
+          "type": "string",
+          "format": "uri",
+          "description": "URL of the product image."
+        },
+        "contentLanguage": {
+          "type": "string",
+          "description": "Two-letter language code."
+        },
+        "targetCountry": {
+          "type": "string",
+          "description": "CLDR territory code."
+        },
+        "channel": {
+          "type": "string",
+          "enum": ["online", "local"],
+          "description": "Product channel."
+        },
+        "availability": {
+          "type": "string",
+          "description": "Availability status."
+        },
+        "condition": {
+          "type": "string",
+          "enum": ["new", "refurbished", "used"],
+          "description": "Condition of the product."
+        },
+        "price": {
+          "$ref": "#/$defs/Price"
+        },
+        "brand": {
+          "type": "string",
+          "description": "Brand of the product."
+        },
+        "gtin": {
+          "type": "string",
+          "description": "Global Trade Item Number."
+        },
+        "mpn": {
+          "type": "string",
+          "description": "Manufacturer Part Number."
+        },
+        "googleProductCategory": {
+          "type": "string",
+          "description": "Google product category."
+        }
+      }
+    },
+    "Price": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": "The price value."
+        },
+        "currency": {
+          "type": "string",
+          "description": "ISO 4217 currency code."
+        }
+      }
+    },
+    "ProductsListResponse": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "type": "string"
+        },
+        "nextPageToken": {
+          "type": "string"
+        },
+        "resources": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Product"
+          }
+        }
+      }
+    }
+  }
+}
