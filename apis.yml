@@ -1,3 +1,4 @@
+aid: google-shopping
 name: Google Content API for Shopping
 description: >-
   The Content API for Shopping allows apps to interact directly with the Google
@@ -9,8 +10,9 @@ description: >-
 image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 url: https://raw.githubusercontent.com/api-evangelist/google-shopping/refs/heads/main/apis.yml
 created: '2026-03-13'
-modified: '2026-03-13'
-specificationVersion: '0.18'
+modified: '2026-03-16'
+specificationVersion: '0.19'
+type: Index
 tags:
   - Shopping
   - E-Commerce
@@ -26,17 +28,37 @@ apis:
     humanURL: https://developers.google.com/shopping-content
     baseURL: https://shoppingcontent.googleapis.com/content/v2.1
     properties:
+      - type: Documentation
+        url: https://developers.google.com/shopping-content/reference/rest
       - type: OpenAPI
         url: https://raw.githubusercontent.com/api-evangelist/google-shopping/refs/heads/main/openapi/openapi.yml
+      - type: Authentication
+        url: https://developers.google.com/shopping-content/guides/how-tos/authorizing
+      - type: Getting Started
+        url: https://developers.google.com/shopping-content/guides/quickstart
       - type: JSONSchema
         url: https://raw.githubusercontent.com/api-evangelist/google-shopping/refs/heads/main/json-schema/google-shopping.json
       - type: JSONLD
         url: https://raw.githubusercontent.com/api-evangelist/google-shopping/refs/heads/main/json-ld/google-shopping.jsonld
 common:
-  - type: GettingStarted
+  - type: Portal
+    url: https://developers.google.com/shopping-content
+  - type: Getting Started
     url: https://developers.google.com/shopping-content/guides/quickstart
+  - type: Documentation
+    url: https://developers.google.com/shopping-content
+  - type: Authentication
+    url: https://developers.google.com/shopping-content/guides/how-tos/authorizing
   - type: Pricing
     url: https://support.google.com/merchants/answer/188493
+  - type: Terms of Service
+    url: https://developers.google.com/terms
+  - type: Privacy Policy
+    url: https://policies.google.com/privacy
+  - type: Status
+    url: https://status.cloud.google.com/
+  - type: Support
+    url: https://developers.google.com/shopping-content/guides/support
   - type: JSONLD
     url: https://raw.githubusercontent.com/api-evangelist/google-shopping/refs/heads/main/json-ld/google-shopping.jsonld
 maintainers:
