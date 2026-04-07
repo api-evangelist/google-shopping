@@ -21,16 +21,14 @@ servers:
   - url: https://shoppingcontent.googleapis.com/content/v2.1
     description: Content API for Shopping v2.1 Server
 tags:
-  - name: Products
-    description: Manage product listings
   - name: Accounts
     description: Manage merchant accounts
-  - name: Orders
-    description: Manage orders
   - name: Datafeeds
     description: Manage data feeds
-  - name: Inventory
-    description: Manage local and regional inventory
+  - name: Orders
+    description: Manage orders
+  - name: Products
+    description: Manage product listings
 paths:
   /{merchantId}/products:
     get:
