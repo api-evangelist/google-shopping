@@ -35,7 +35,7 @@ paths:
   /{merchantId}/products:
     get:
       operationId: listProducts
-      summary: List Products
+      summary: Google Content API for Shopping List Products
       description: Lists the products in the specified merchant account.
       tags:
         - Products
@@ -65,7 +65,7 @@ paths:
                 $ref: '#/components/schemas/ProductsListResponse'
     post:
       operationId: insertProduct
-      summary: Insert Product
+      summary: Google Content API for Shopping Insert Product
       description: Uploads a product to the specified merchant account.
       tags:
         - Products
@@ -92,7 +92,7 @@ paths:
   /{merchantId}/products/{productId}:
     get:
       operationId: getProduct
-      summary: Get Product
+      summary: Google Content API for Shopping Get Product
       description: Retrieves a product from the merchant account.
       tags:
         - Products
@@ -116,7 +116,7 @@ paths:
                 $ref: '#/components/schemas/Product'
     delete:
       operationId: deleteProduct
-      summary: Delete Product
+      summary: Google Content API for Shopping Delete Product
       description: Deletes a product from the merchant account.
       tags:
         - Products
@@ -137,7 +137,7 @@ paths:
   /{merchantId}/accounts:
     get:
       operationId: listAccounts
-      summary: List Accounts
+      summary: Google Content API for Shopping List Accounts
       description: Lists the sub-accounts in a multi-client account.
       tags:
         - Accounts
@@ -157,7 +157,7 @@ paths:
   /{merchantId}/orders:
     get:
       operationId: listOrders
-      summary: List Orders
+      summary: Google Content API for Shopping List Orders
       description: Lists the orders in the specified merchant account.
       tags:
         - Orders
@@ -177,7 +177,7 @@ paths:
   /{merchantId}/datafeeds:
     get:
       operationId: listDatafeeds
-      summary: List Datafeeds
+      summary: Google Content API for Shopping List Datafeeds
       description: Lists the data feeds in the specified merchant account.
       tags:
         - Datafeeds
