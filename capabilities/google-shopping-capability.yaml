@@ -1,0 +1,379 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Google Content API for Shopping
+  description: The Content API for Shopping allows apps to interact directly with the Google Merchant Center platform, enabling
+    management of product listings, account information, data feeds, inventory, orders, and promotions. It provides programmatic
+    access to create, update, and delete products, manage shipping and tax settings, handle order workflows, and access reporting
+    data.
+  tags:
+  - Google
+  - Shopping
+  - API
+  created: '2026-05-06'
+  modified: '2026-05-06'
+capability:
+  consumes:
+  - type: http
+    namespace: google-shopping
+    baseUri: https://shoppingcontent.googleapis.com/content/v2.1
+    description: Google Content API for Shopping HTTP API.
+    resources:
+    - name: merchantid-products
+      path: /{merchantId}/products
+      operations:
+      - name: listproducts
+        method: GET
+        description: Google Content API for Shopping List Products
+        inputParameters:
+        - name: merchantId
+          in: path
+          type: string
+          required: true
+          description: The ID of the merchant account.
+        - name: maxResults
+          in: query
+          type: integer
+          description: Maximum number of products to return.
+        - name: pageToken
+          in: query
+          type: string
+          description: Token for pagination.
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: insertproduct
+        method: POST
+        description: Google Content API for Shopping Insert Product
+        inputParameters:
+        - name: merchantId
+          in: path
+          type: string
+          required: true
+          description: The ID of the merchant account.
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: merchantid-products-productid
+      path: /{merchantId}/products/{productId}
+      operations:
+      - name: getproduct
+        method: GET
+        description: Google Content API for Shopping Get Product
+        inputParameters:
+        - name: merchantId
+          in: path
+          type: string
+          required: true
+        - name: productId
+          in: path
+          type: string
+          required: true
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: deleteproduct
+        method: DELETE
+        description: Google Content API for Shopping Delete Product
+        inputParameters:
+        - name: merchantId
+          in: path
+          type: string
+          required: true
+        - name: productId
+          in: path
+          type: string
+          required: true
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: merchantid-accounts
+      path: /{merchantId}/accounts
+      operations:
+      - name: listaccounts
+        method: GET
+        description: Google Content API for Shopping List Accounts
+        inputParameters:
+        - name: merchantId
+          in: path
+          type: string
+          required: true
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: merchantid-orders
+      path: /{merchantId}/orders
+      operations:
+      - name: listorders
+        method: GET
+        description: Google Content API for Shopping List Orders
+        inputParameters:
+        - name: merchantId
+          in: path
+          type: string
+          required: true
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: merchantid-datafeeds
+      path: /{merchantId}/datafeeds
+      operations:
+      - name: listdatafeeds
+        method: GET
+        description: Google Content API for Shopping List Datafeeds
+        inputParameters:
+        - name: merchantId
+          in: path
+          type: string
+          required: true
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+  exposes:
+  - type: rest
+    port: 8080
+    namespace: google-shopping-rest
+    description: REST adapter for Google Content API for Shopping.
+    resources:
+    - path: /{merchantId}/products
+      name: listproducts
+      operations:
+      - method: GET
+        name: listproducts
+        description: Google Content API for Shopping List Products
+        call: google-shopping.listproducts
+        with:
+          merchantId: rest.merchantId
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /{merchantId}/products
+      name: insertproduct
+      operations:
+      - method: POST
+        name: insertproduct
+        description: Google Content API for Shopping Insert Product
+        call: google-shopping.insertproduct
+        with:
+          merchantId: rest.merchantId
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /{merchantId}/products/{productId}
+      name: getproduct
+      operations:
+      - method: GET
+        name: getproduct
+        description: Google Content API for Shopping Get Product
+        call: google-shopping.getproduct
+        with:
+          merchantId: rest.merchantId
+          productId: rest.productId
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /{merchantId}/products/{productId}
+      name: deleteproduct
+      operations:
+      - method: DELETE
+        name: deleteproduct
+        description: Google Content API for Shopping Delete Product
+        call: google-shopping.deleteproduct
+        with:
+          merchantId: rest.merchantId
+          productId: rest.productId
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /{merchantId}/accounts
+      name: listaccounts
+      operations:
+      - method: GET
+        name: listaccounts
+        description: Google Content API for Shopping List Accounts
+        call: google-shopping.listaccounts
+        with:
+          merchantId: rest.merchantId
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /{merchantId}/orders
+      name: listorders
+      operations:
+      - method: GET
+        name: listorders
+        description: Google Content API for Shopping List Orders
+        call: google-shopping.listorders
+        with:
+          merchantId: rest.merchantId
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /{merchantId}/datafeeds
+      name: listdatafeeds
+      operations:
+      - method: GET
+        name: listdatafeeds
+        description: Google Content API for Shopping List Datafeeds
+        call: google-shopping.listdatafeeds
+        with:
+          merchantId: rest.merchantId
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    port: 9090
+    namespace: google-shopping-mcp
+    transport: http
+    description: MCP adapter for Google Content API for Shopping for AI agent use.
+    tools:
+    - name: listproducts
+      description: Google Content API for Shopping List Products
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: google-shopping.listproducts
+      with:
+        merchantId: tools.merchantId
+        maxResults: tools.maxResults
+        pageToken: tools.pageToken
+      inputParameters:
+      - name: merchantId
+        type: string
+        description: The ID of the merchant account.
+        required: true
+      - name: maxResults
+        type: integer
+        description: Maximum number of products to return.
+      - name: pageToken
+        type: string
+        description: Token for pagination.
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: insertproduct
+      description: Google Content API for Shopping Insert Product
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: google-shopping.insertproduct
+      with:
+        merchantId: tools.merchantId
+      inputParameters:
+      - name: merchantId
+        type: string
+        description: The ID of the merchant account.
+        required: true
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getproduct
+      description: Google Content API for Shopping Get Product
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: google-shopping.getproduct
+      with:
+        merchantId: tools.merchantId
+        productId: tools.productId
+      inputParameters:
+      - name: merchantId
+        type: string
+        description: merchantId
+        required: true
+      - name: productId
+        type: string
+        description: productId
+        required: true
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: deleteproduct
+      description: Google Content API for Shopping Delete Product
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: google-shopping.deleteproduct
+      with:
+        merchantId: tools.merchantId
+        productId: tools.productId
+      inputParameters:
+      - name: merchantId
+        type: string
+        description: merchantId
+        required: true
+      - name: productId
+        type: string
+        description: productId
+        required: true
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: listaccounts
+      description: Google Content API for Shopping List Accounts
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: google-shopping.listaccounts
+      with:
+        merchantId: tools.merchantId
+      inputParameters:
+      - name: merchantId
+        type: string
+        description: merchantId
+        required: true
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: listorders
+      description: Google Content API for Shopping List Orders
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: google-shopping.listorders
+      with:
+        merchantId: tools.merchantId
+      inputParameters:
+      - name: merchantId
+        type: string
+        description: merchantId
+        required: true
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: listdatafeeds
+      description: Google Content API for Shopping List Datafeeds
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: google-shopping.listdatafeeds
+      with:
+        merchantId: tools.merchantId
+      inputParameters:
+      - name: merchantId
+        type: string
+        description: merchantId
+        required: true
+      outputParameters:
+      - type: object
+        mapping: $.
