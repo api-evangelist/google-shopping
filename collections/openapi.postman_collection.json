@@ -1,0 +1,744 @@
+{
+  "item": [
+    {
+      "id": "a00e2491-8a4e-4bf7-88f4-586d48bfefd9",
+      "name": "Accounts",
+      "description": {
+        "content": "Manage merchant accounts",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "910e05cb-7ce6-4b08-96ec-e9dfa62a0b86",
+          "name": "Google Content API for Shopping List Accounts",
+          "request": {
+            "name": "Google Content API for Shopping List Accounts",
+            "description": {
+              "content": "Lists the sub-accounts in a multi-client account.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ":merchantId",
+                "accounts"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "merchantId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "53c1c36d-92f5-480d-b3c8-3e672ad76319",
+              "name": "Successful response with account list.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ":merchantId",
+                    "accounts"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "merchantId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"kind\": \"string\",\n  \"nextPageToken\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "e60a5ca7-7c5e-4e94-a398-d2bde1fea37d",
+      "name": "Datafeeds",
+      "description": {
+        "content": "Manage data feeds",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "4e71ce0f-28f4-4e51-a8dc-87f95ccd9618",
+          "name": "Google Content API for Shopping List Datafeeds",
+          "request": {
+            "name": "Google Content API for Shopping List Datafeeds",
+            "description": {
+              "content": "Lists the data feeds in the specified merchant account.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ":merchantId",
+                "datafeeds"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "merchantId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "3e200dfb-1ee8-4a20-b93f-a0933c90cf73",
+              "name": "Successful response with datafeed list.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ":merchantId",
+                    "datafeeds"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "merchantId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"kind\": \"string\",\n  \"nextPageToken\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "28957b40-a0ea-46cd-bb04-771c45f919ab",
+      "name": "Orders",
+      "description": {
+        "content": "Manage orders",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "ec24f9ef-000f-45a3-9508-da516c598246",
+          "name": "Google Content API for Shopping List Orders",
+          "request": {
+            "name": "Google Content API for Shopping List Orders",
+            "description": {
+              "content": "Lists the orders in the specified merchant account.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ":merchantId",
+                "orders"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "merchantId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "3c1b3af0-0ae4-4bfd-a11b-c0abdbd0d9a9",
+              "name": "Successful response with order list.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ":merchantId",
+                    "orders"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "merchantId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"kind\": \"string\",\n  \"nextPageToken\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "5aec035e-4cce-4447-a8ca-0d21af831cb8",
+      "name": "Products",
+      "description": {
+        "content": "Manage product listings",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "68d2aaef-f1c2-44de-b303-b2d4502ff536",
+          "name": "Google Content API for Shopping List Products",
+          "request": {
+            "name": "Google Content API for Shopping List Products",
+            "description": {
+              "content": "Lists the products in the specified merchant account.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ":merchantId",
+                "products"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "maxResults",
+                  "value": "<integer>",
+                  "description": "Maximum number of products to return."
+                },
+                {
+                  "disabled": false,
+                  "key": "pageToken",
+                  "value": "<string>",
+                  "description": "Token for pagination."
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "merchantId",
+                  "description": "(Required) The ID of the merchant account."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d532e2c6-c8e5-433a-a4b1-7730f833d941",
+              "name": "Successful response with product list.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ":merchantId",
+                    "products"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "maxResults",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "pageToken",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "merchantId",
+                      "description": "(Required) The ID of the merchant account."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"kind\": \"string\",\n  \"nextPageToken\": \"string\",\n  \"resources\": [\n    {\n      \"id\": \"string\",\n      \"offerId\": \"string\",\n      \"title\": \"string\",\n      \"description\": \"string\",\n      \"link\": \"https://fMKZSjlCQhIpXjZeVnlCQXBE.vqiDCm.rFDtzshTWDb-J,19f6xeh\",\n      \"imageLink\": \"https://lEnJzlJbz.lyHziYrXk-CqtW\",\n      \"contentLanguage\": \"string\",\n      \"targetCountry\": \"string\",\n      \"channel\": \"online\",\n      \"availability\": \"string\",\n      \"condition\": \"used\",\n      \"price\": {\n        \"value\": \"string\",\n        \"currency\": \"string\"\n      },\n      \"brand\": \"string\",\n      \"gtin\": \"string\",\n      \"mpn\": \"string\",\n      \"googleProductCategory\": \"string\"\n    },\n    {\n      \"id\": \"string\",\n      \"offerId\": \"string\",\n      \"title\": \"string\",\n      \"description\": \"string\",\n      \"link\": \"http://NffZpSSmwiAA.gvoqVqr3nrKYCiGM7yUbFLYRaqGLJf2sjJ9GfH3eraWxu13ZJfg3\",\n      \"imageLink\": \"https://wFCUZGwZVkYAmXGMgIHNNJZ.ytosEg3miyqeMxKs10Jmc-h14jQhY842ihpkIUhO45tzeCALcCwKjA+u9V1LqNEiucATQA9fawCE\",\n      \"contentLanguage\": \"string\",\n      \"targetCountry\": \"string\",\n      \"channel\": \"local\",\n      \"availability\": \"string\",\n      \"condition\": \"new\",\n      \"price\": {\n        \"value\": \"string\",\n        \"currency\": \"string\"\n      },\n      \"brand\": \"string\",\n      \"gtin\": \"string\",\n      \"mpn\": \"string\",\n      \"googleProductCategory\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "141fe665-8dce-470f-915d-c4156200ef45",
+          "name": "Google Content API for Shopping Insert Product",
+          "request": {
+            "name": "Google Content API for Shopping Insert Product",
+            "description": {
+              "content": "Uploads a product to the specified merchant account.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ":merchantId",
+                "products"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "merchantId",
+                  "description": "(Required) The ID of the merchant account."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<string>\",\n  \"offerId\": \"<string>\",\n  \"title\": \"<string>\",\n  \"description\": \"<string>\",\n  \"link\": \"<uri>\",\n  \"imageLink\": \"<uri>\",\n  \"contentLanguage\": \"<string>\",\n  \"targetCountry\": \"<string>\",\n  \"channel\": \"<string>\",\n  \"availability\": \"<string>\",\n  \"condition\": \"<string>\",\n  \"price\": {\n    \"value\": \"<string>\",\n    \"currency\": \"<string>\"\n  },\n  \"brand\": \"<string>\",\n  \"gtin\": \"<string>\",\n  \"mpn\": \"<string>\",\n  \"googleProductCategory\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "3e2070c4-a256-42aa-91b7-a454bfe34aad",
+              "name": "Successful product insertion.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ":merchantId",
+                    "products"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "merchantId",
+                      "description": "(Required) The ID of the merchant account."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"<string>\",\n  \"offerId\": \"<string>\",\n  \"title\": \"<string>\",\n  \"description\": \"<string>\",\n  \"link\": \"<uri>\",\n  \"imageLink\": \"<uri>\",\n  \"contentLanguage\": \"<string>\",\n  \"targetCountry\": \"<string>\",\n  \"channel\": \"<string>\",\n  \"availability\": \"<string>\",\n  \"condition\": \"<string>\",\n  \"price\": {\n    \"value\": \"string\",\n    \"currency\": \"string\"\n  },\n  \"brand\": \"<string>\",\n  \"gtin\": \"<string>\",\n  \"mpn\": \"<string>\",\n  \"googleProductCategory\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"string\",\n  \"offerId\": \"string\",\n  \"title\": \"string\",\n  \"description\": \"string\",\n  \"link\": \"http://KZaIvWSZadPCnuoZXvsCKKBABmkmHwXGa.qjleRBBMbQ9P71hjOnpa7OGa\",\n  \"imageLink\": \"https://PsDVafCCZOq.soysMzdhk.qLAvNH.ekCYHLo9JPXvXZPvJjcQhcfZDwVSXq6PDXA\",\n  \"contentLanguage\": \"string\",\n  \"targetCountry\": \"string\",\n  \"channel\": \"online\",\n  \"availability\": \"string\",\n  \"condition\": \"refurbished\",\n  \"price\": {\n    \"value\": \"string\",\n    \"currency\": \"string\"\n  },\n  \"brand\": \"string\",\n  \"gtin\": \"string\",\n  \"mpn\": \"string\",\n  \"googleProductCategory\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "ddaa682c-773d-4db6-9e1c-822abfc60889",
+          "name": "Google Content API for Shopping Get Product",
+          "request": {
+            "name": "Google Content API for Shopping Get Product",
+            "description": {
+              "content": "Retrieves a product from the merchant account.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ":merchantId",
+                "products",
+                ":productId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "merchantId",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "productId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d8261172-b34e-4f9c-b1b4-4fc6da5fd284",
+              "name": "Successful response with product details.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ":merchantId",
+                    "products",
+                    ":productId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "merchantId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "productId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"string\",\n  \"offerId\": \"string\",\n  \"title\": \"string\",\n  \"description\": \"string\",\n  \"link\": \"http://KZaIvWSZadPCnuoZXvsCKKBABmkmHwXGa.qjleRBBMbQ9P71hjOnpa7OGa\",\n  \"imageLink\": \"https://PsDVafCCZOq.soysMzdhk.qLAvNH.ekCYHLo9JPXvXZPvJjcQhcfZDwVSXq6PDXA\",\n  \"contentLanguage\": \"string\",\n  \"targetCountry\": \"string\",\n  \"channel\": \"online\",\n  \"availability\": \"string\",\n  \"condition\": \"refurbished\",\n  \"price\": {\n    \"value\": \"string\",\n    \"currency\": \"string\"\n  },\n  \"brand\": \"string\",\n  \"gtin\": \"string\",\n  \"mpn\": \"string\",\n  \"googleProductCategory\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "4c0ef51b-a70e-49c4-bc21-dc8384d624af",
+          "name": "Google Content API for Shopping Delete Product",
+          "request": {
+            "name": "Google Content API for Shopping Delete Product",
+            "description": {
+              "content": "Deletes a product from the merchant account.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ":merchantId",
+                "products",
+                ":productId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "merchantId",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "productId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "b47c2eb7-ae05-492f-a290-9248ad32f8d2",
+              "name": "Product successfully deleted.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ":merchantId",
+                    "products",
+                    ":productId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "merchantId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "productId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "No Content",
+              "code": 204,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://shoppingcontent.googleapis.com/content/v2.1",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "a2d39d36-22e8-4d00-92ea-9c5ffe100550",
+    "name": "Google Content API for Shopping",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Content API for Shopping allows apps to interact directly with the Google Merchant Center platform, enabling management of product listings, account information, data feeds, inventory, orders, and promotions. It provides programmatic access to create, update, and delete products, manage shipping and tax settings, handle order workflows, and access reporting data.\n\nContact Support:\n Name: Google Shopping",
+      "type": "text/plain"
+    }
+  }
+}

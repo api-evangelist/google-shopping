@@ -1,0 +1,196 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Google Content API for Shopping",
+    "version": "2.1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Products",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Google Content API for Shopping List Products",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://shoppingcontent.googleapis.com/content/v2.1/:merchantId/products",
+            "params": [
+              {
+                "name": "merchantId",
+                "value": "",
+                "type": "path",
+                "description": "The ID of the merchant account."
+              },
+              {
+                "name": "maxResults",
+                "value": "",
+                "type": "query",
+                "description": "Maximum number of products to return."
+              },
+              {
+                "name": "pageToken",
+                "value": "",
+                "type": "query",
+                "description": "Token for pagination."
+              }
+            ]
+          },
+          "docs": "Lists the products in the specified merchant account."
+        },
+        {
+          "info": {
+            "name": "Google Content API for Shopping Insert Product",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://shoppingcontent.googleapis.com/content/v2.1/:merchantId/products",
+            "params": [
+              {
+                "name": "merchantId",
+                "value": "",
+                "type": "path",
+                "description": "The ID of the merchant account."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Uploads a product to the specified merchant account."
+        },
+        {
+          "info": {
+            "name": "Google Content API for Shopping Get Product",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://shoppingcontent.googleapis.com/content/v2.1/:merchantId/products/:productId",
+            "params": [
+              {
+                "name": "merchantId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "productId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieves a product from the merchant account."
+        },
+        {
+          "info": {
+            "name": "Google Content API for Shopping Delete Product",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://shoppingcontent.googleapis.com/content/v2.1/:merchantId/products/:productId",
+            "params": [
+              {
+                "name": "merchantId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "productId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Deletes a product from the merchant account."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Accounts",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Google Content API for Shopping List Accounts",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://shoppingcontent.googleapis.com/content/v2.1/:merchantId/accounts",
+            "params": [
+              {
+                "name": "merchantId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Lists the sub-accounts in a multi-client account."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Orders",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Google Content API for Shopping List Orders",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://shoppingcontent.googleapis.com/content/v2.1/:merchantId/orders",
+            "params": [
+              {
+                "name": "merchantId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Lists the orders in the specified merchant account."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Datafeeds",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Google Content API for Shopping List Datafeeds",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://shoppingcontent.googleapis.com/content/v2.1/:merchantId/datafeeds",
+            "params": [
+              {
+                "name": "merchantId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Lists the data feeds in the specified merchant account."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
