@@ -39,6 +39,10 @@ apis:
         url: >-
           https://raw.githubusercontent.com/api-evangelist/google-shopping/refs/heads/main/json-ld/google-shopping.jsonld
 common:
+  - type: VulnerabilityDisclosure
+    url: security/google-shopping-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/google-shopping-domain-security.yml
   - type: LinkedIn
     url: https://www.linkedin.com/showcase/google-shopping
   - type: Portal
