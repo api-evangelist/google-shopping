@@ -1,0 +1,54 @@
+openapi: 3.1.0
+info:
+  title: Google Content API for Shopping Accounts API
+  description: The Content API for Shopping allows apps to interact directly with the Google Merchant Center platform, enabling management of product listings, account information, data feeds, inventory, orders, and promotions. It provides programmatic access to create, update, and delete products, manage shipping and tax settings, handle order workflows, and access reporting data.
+  version: 2.1.0
+  contact:
+    name: Google Shopping
+    url: https://developers.google.com/shopping-content
+  license:
+    name: Google APIs Terms of Service
+    url: https://developers.google.com/terms
+servers:
+- url: https://shoppingcontent.googleapis.com/content/v2.1
+  description: Content API for Shopping v2.1 Server
+tags:
+- name: Accounts
+  description: Manage merchant accounts
+paths:
+  /{merchantId}/accounts:
+    get:
+      operationId: listAccounts
+      summary: Google Content API for Shopping List Accounts
+      description: Lists the sub-accounts in a multi-client account.
+      tags:
+      - Accounts
+      parameters:
+      - name: merchantId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response with account list.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccountsListResponse'
+components:
+  schemas:
+    AccountsListResponse:
+      type: object
+      properties:
+        kind:
+          type: string
+        nextPageToken:
+          type: string
+        resources:
+          type: array
+          items:
+            type: object
+externalDocs:
+  description: Content API for Shopping Documentation
+  url: https://developers.google.com/shopping-content/guides/quickstart
