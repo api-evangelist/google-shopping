@@ -5,7 +5,19 @@ description: >-
   management of product listings, account information, data feeds, inventory, orders, and promotions. It provides
   programmatic access to create, update, and delete products, manage shipping and tax settings, handle order workflows,
   and access reporting data for Google Shopping.
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Freemium
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/google-shopping.png
 url: https://raw.githubusercontent.com/api-evangelist/google-shopping/refs/heads/main/apis.yml
 created: '2026-03-13'
 modified: '2026-05-19'
@@ -19,26 +31,97 @@ tags:
   - Retail
   - Shopping
 apis:
-  - name: Google Content API for Shopping
-    description: REST API for managing product listings, accounts, data feeds, orders, and inventory in Google Merchant Center.
-    humanURL: https://developers.google.com/shopping-content
-    baseURL: https://shoppingcontent.googleapis.com/content/v2.1
-    properties:
-      - type: Documentation
-        url: https://developers.google.com/shopping-content/reference/rest
-      - type: OpenAPI
-        url: https://raw.githubusercontent.com/api-evangelist/google-shopping/refs/heads/main/openapi/openapi.yml
-      - type: Authentication
-        url: https://developers.google.com/shopping-content/guides/how-tos/authorizing
-      - type: GettingStarted
-        url: https://developers.google.com/shopping-content/guides/quickstart
-      - type: JSONSchema
-        url: >-
-          https://raw.githubusercontent.com/api-evangelist/google-shopping/refs/heads/main/json-schema/google-shopping.json
-      - type: JSONLD
-        url: >-
-          https://raw.githubusercontent.com/api-evangelist/google-shopping/refs/heads/main/json-ld/google-shopping.jsonld
+- aid: google-shopping:google-shopping-accounts-api
+  name: Google Content API for Shopping Accounts API
+  description: Manage merchant accounts
+  humanURL: https://developers.google.com/shopping-content
+  baseURL: https://shoppingcontent.googleapis.com/content/v2.1
+  tags:
+  - Accounts
+  properties:
+  - type: OpenAPI
+    url: openapi/google-shopping-accounts-api-openapi.yml
+  - type: Documentation
+    url: https://developers.google.com/shopping-content/reference/rest
+  - type: Authentication
+    url: https://developers.google.com/shopping-content/guides/how-tos/authorizing
+  - type: GettingStarted
+    url: https://developers.google.com/shopping-content/guides/quickstart
+  - type: JSONSchema
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/google-shopping/refs/heads/main/json-schema/google-shopping.json
+  - type: JSONLD
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/google-shopping/refs/heads/main/json-ld/google-shopping.jsonld
+- aid: google-shopping:google-shopping-datafeeds-api
+  name: Google Content API for Shopping Datafeeds API
+  description: Manage data feeds
+  humanURL: https://developers.google.com/shopping-content
+  baseURL: https://shoppingcontent.googleapis.com/content/v2.1
+  tags:
+  - Datafeeds
+  properties:
+  - type: OpenAPI
+    url: openapi/google-shopping-datafeeds-api-openapi.yml
+  - type: Documentation
+    url: https://developers.google.com/shopping-content/reference/rest
+  - type: Authentication
+    url: https://developers.google.com/shopping-content/guides/how-tos/authorizing
+  - type: GettingStarted
+    url: https://developers.google.com/shopping-content/guides/quickstart
+  - type: JSONSchema
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/google-shopping/refs/heads/main/json-schema/google-shopping.json
+  - type: JSONLD
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/google-shopping/refs/heads/main/json-ld/google-shopping.jsonld
+- aid: google-shopping:google-shopping-orders-api
+  name: Google Content API for Shopping Orders API
+  description: Manage orders
+  humanURL: https://developers.google.com/shopping-content
+  baseURL: https://shoppingcontent.googleapis.com/content/v2.1
+  tags:
+  - Orders
+  properties:
+  - type: OpenAPI
+    url: openapi/google-shopping-orders-api-openapi.yml
+  - type: Documentation
+    url: https://developers.google.com/shopping-content/reference/rest
+  - type: Authentication
+    url: https://developers.google.com/shopping-content/guides/how-tos/authorizing
+  - type: GettingStarted
+    url: https://developers.google.com/shopping-content/guides/quickstart
+  - type: JSONSchema
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/google-shopping/refs/heads/main/json-schema/google-shopping.json
+  - type: JSONLD
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/google-shopping/refs/heads/main/json-ld/google-shopping.jsonld
+- aid: google-shopping:google-shopping-products-api
+  name: Google Content API for Shopping Products API
+  description: Manage product listings
+  humanURL: https://developers.google.com/shopping-content
+  baseURL: https://shoppingcontent.googleapis.com/content/v2.1
+  tags:
+  - Products
+  properties:
+  - type: OpenAPI
+    url: openapi/google-shopping-products-api-openapi.yml
+  - type: Documentation
+    url: https://developers.google.com/shopping-content/reference/rest
+  - type: Authentication
+    url: https://developers.google.com/shopping-content/guides/how-tos/authorizing
+  - type: GettingStarted
+    url: https://developers.google.com/shopping-content/guides/quickstart
+  - type: JSONSchema
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/google-shopping/refs/heads/main/json-schema/google-shopping.json
+  - type: JSONLD
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/google-shopping/refs/heads/main/json-ld/google-shopping.jsonld
 common:
+  - type: PostmanWorkspace
+    url: https://www.postman.com/kinlaneapi/google-content-api-for-shopping/overview
   - type: AgenticAccess
     url: agentic-access/google-shopping-agentic-access.yml
   - type: VulnerabilityDisclosure
