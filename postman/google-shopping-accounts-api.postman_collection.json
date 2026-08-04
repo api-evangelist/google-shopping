@@ -1,0 +1,121 @@
+{
+  "info": {
+    "_postman_id": "a11b0c0e-189a-4011-b580-a211bb8bca14",
+    "name": "Google Content API for Shopping Accounts API",
+    "description": "The Content API for Shopping allows apps to interact directly with the Google Merchant Center platform, enabling management of product listings, account information, data feeds, inventory, orders, and promotions. It provides programmatic access to create, update, and delete products, manage shipping and tax settings, handle order workflows, and access reporting data.\n\nContact Support:\n Name: Google Shopping",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T01:50:19.000Z",
+    "updatedAt": "2026-07-28T01:50:20.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-a11b0c0e-189a-4011-b580-a211bb8bca14"
+  },
+  "item": [
+    {
+      "name": "{merchantId}",
+      "item": [
+        {
+          "name": "accounts",
+          "item": [
+            {
+              "name": "Google Content API for Shopping List Accounts",
+              "id": "8aabf89f-a316-4fe3-ab23-4d7c0f87bdf6",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/:merchantId/accounts",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ":merchantId",
+                    "accounts"
+                  ],
+                  "variable": [
+                    {
+                      "id": "d8ab08fe-8c60-432b-b7f4-baf7a83391a4",
+                      "key": "merchantId",
+                      "value": "<string>",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "description": "Lists the sub-accounts in a multi-client account."
+              },
+              "response": [
+                {
+                  "id": "663ffb50-945c-418f-ad78-991cf604f1fa",
+                  "name": "Successful response with account list.",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/:merchantId/accounts",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        ":merchantId",
+                        "accounts"
+                      ],
+                      "variable": [
+                        {
+                          "key": "merchantId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\n  \"kind\": \"<string>\",\n  \"nextPageToken\": \"<string>\"\n}",
+                  "createdAt": "2026-07-28T01:50:20.000Z",
+                  "updatedAt": "2026-07-28T01:50:20.000Z",
+                  "uid": "35240-663ffb50-945c-418f-ad78-991cf604f1fa"
+                }
+              ],
+              "createdAt": "2026-07-28T01:50:20.000Z",
+              "updatedAt": "2026-07-28T01:50:20.000Z",
+              "uid": "35240-8aabf89f-a316-4fe3-ab23-4d7c0f87bdf6"
+            }
+          ],
+          "id": "b170855d-c70f-4c9d-b884-dcd048f648fa",
+          "createdAt": "2026-07-28T01:50:20.000Z",
+          "updatedAt": "2026-07-28T01:50:20.000Z",
+          "uid": "35240-b170855d-c70f-4c9d-b884-dcd048f648fa"
+        }
+      ],
+      "id": "d5a19ce9-d91e-47f9-8e9e-63dc31d32987",
+      "createdAt": "2026-07-28T01:50:20.000Z",
+      "updatedAt": "2026-07-28T01:50:20.000Z",
+      "uid": "35240-d5a19ce9-d91e-47f9-8e9e-63dc31d32987"
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://shoppingcontent.googleapis.com/content/v2.1"
+    }
+  ]
+}

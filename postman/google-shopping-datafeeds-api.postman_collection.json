@@ -1,0 +1,121 @@
+{
+  "info": {
+    "_postman_id": "559576c4-ca08-4fbe-bc12-8adf280204c9",
+    "name": "Google Content API for Shopping Accounts Datafeeds API",
+    "description": "The Content API for Shopping allows apps to interact directly with the Google Merchant Center platform, enabling management of product listings, account information, data feeds, inventory, orders, and promotions. It provides programmatic access to create, update, and delete products, manage shipping and tax settings, handle order workflows, and access reporting data.\n\nContact Support:\n Name: Google Shopping",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T01:50:26.000Z",
+    "updatedAt": "2026-07-28T01:50:26.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-559576c4-ca08-4fbe-bc12-8adf280204c9"
+  },
+  "item": [
+    {
+      "name": "{merchantId}",
+      "item": [
+        {
+          "name": "datafeeds",
+          "item": [
+            {
+              "name": "Google Content API for Shopping List Datafeeds",
+              "id": "1a492657-4261-41eb-993e-1befa5d617e4",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/:merchantId/datafeeds",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ":merchantId",
+                    "datafeeds"
+                  ],
+                  "variable": [
+                    {
+                      "id": "e3fe3374-ed75-4847-9900-361953719ea4",
+                      "key": "merchantId",
+                      "value": "<string>",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "description": "Lists the data feeds in the specified merchant account."
+              },
+              "response": [
+                {
+                  "id": "3b456d5d-b942-4bce-969d-7f35cd878a4f",
+                  "name": "Successful response with datafeed list.",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/:merchantId/datafeeds",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        ":merchantId",
+                        "datafeeds"
+                      ],
+                      "variable": [
+                        {
+                          "key": "merchantId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\n  \"kind\": \"<string>\",\n  \"nextPageToken\": \"<string>\"\n}",
+                  "createdAt": "2026-07-28T01:50:26.000Z",
+                  "updatedAt": "2026-07-28T01:50:26.000Z",
+                  "uid": "35240-3b456d5d-b942-4bce-969d-7f35cd878a4f"
+                }
+              ],
+              "createdAt": "2026-07-28T01:50:26.000Z",
+              "updatedAt": "2026-07-28T01:50:26.000Z",
+              "uid": "35240-1a492657-4261-41eb-993e-1befa5d617e4"
+            }
+          ],
+          "id": "960ee1c3-9903-469a-9804-6b7406087514",
+          "createdAt": "2026-07-28T01:50:26.000Z",
+          "updatedAt": "2026-07-28T01:50:26.000Z",
+          "uid": "35240-960ee1c3-9903-469a-9804-6b7406087514"
+        }
+      ],
+      "id": "9704a5c5-68af-4f7b-afc5-ee4e77388a4c",
+      "createdAt": "2026-07-28T01:50:26.000Z",
+      "updatedAt": "2026-07-28T01:50:26.000Z",
+      "uid": "35240-9704a5c5-68af-4f7b-afc5-ee4e77388a4c"
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://shoppingcontent.googleapis.com/content/v2.1"
+    }
+  ]
+}

@@ -1,0 +1,438 @@
+{
+  "info": {
+    "_postman_id": "056fc9d3-7393-481f-9df2-a7a8159bc70f",
+    "name": "Google Content API for Shopping Accounts Products API",
+    "description": "The Content API for Shopping allows apps to interact directly with the Google Merchant Center platform, enabling management of product listings, account information, data feeds, inventory, orders, and promotions. It provides programmatic access to create, update, and delete products, manage shipping and tax settings, handle order workflows, and access reporting data.\n\nContact Support:\n Name: Google Shopping",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T01:50:28.000Z",
+    "updatedAt": "2026-07-28T01:50:28.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-056fc9d3-7393-481f-9df2-a7a8159bc70f"
+  },
+  "item": [
+    {
+      "name": "{merchantId}",
+      "item": [
+        {
+          "name": "products",
+          "item": [
+            {
+              "name": "{productId}",
+              "item": [
+                {
+                  "name": "Google Content API for Shopping Get Product",
+                  "id": "1808e32e-89d7-43f3-b02e-a27a9968b0ab",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/:merchantId/products/:productId",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        ":merchantId",
+                        "products",
+                        ":productId"
+                      ],
+                      "variable": [
+                        {
+                          "id": "0eac0f42-4923-47c3-8cb4-5c5cbc28c3f8",
+                          "key": "merchantId",
+                          "value": "<string>",
+                          "description": "(Required) "
+                        },
+                        {
+                          "id": "499a2d8b-3a6d-43cf-9ee4-e7807a5c8d39",
+                          "key": "productId",
+                          "value": "<string>",
+                          "description": "(Required) "
+                        }
+                      ]
+                    },
+                    "description": "Retrieves a product from the merchant account."
+                  },
+                  "response": [
+                    {
+                      "id": "68eaa358-9545-4e23-b6a5-14d0cf7b63c0",
+                      "name": "Successful response with product details.",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/:merchantId/products/:productId",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            ":merchantId",
+                            "products",
+                            ":productId"
+                          ],
+                          "variable": [
+                            {
+                              "key": "merchantId"
+                            },
+                            {
+                              "key": "productId"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\n  \"id\": \"<string>\",\n  \"offerId\": \"<string>\",\n  \"title\": \"<string>\",\n  \"description\": \"<string>\",\n  \"link\": \"<uri>\",\n  \"imageLink\": \"<uri>\",\n  \"contentLanguage\": \"<string>\",\n  \"targetCountry\": \"<string>\",\n  \"channel\": \"online\",\n  \"availability\": \"<string>\",\n  \"condition\": \"new\",\n  \"price\": {\n    \"value\": \"<string>\",\n    \"currency\": \"<string>\"\n  },\n  \"brand\": \"<string>\",\n  \"gtin\": \"<string>\",\n  \"mpn\": \"<string>\",\n  \"googleProductCategory\": \"<string>\"\n}",
+                      "createdAt": "2026-07-28T01:50:28.000Z",
+                      "updatedAt": "2026-07-28T01:50:28.000Z",
+                      "uid": "35240-68eaa358-9545-4e23-b6a5-14d0cf7b63c0"
+                    }
+                  ],
+                  "createdAt": "2026-07-28T01:50:28.000Z",
+                  "updatedAt": "2026-07-28T01:50:28.000Z",
+                  "uid": "35240-1808e32e-89d7-43f3-b02e-a27a9968b0ab"
+                },
+                {
+                  "name": "Google Content API for Shopping Delete Product",
+                  "id": "8a9902f5-6bf7-4ee0-911c-9b806a42dfed",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "DELETE",
+                    "header": [],
+                    "url": {
+                      "raw": "{{baseUrl}}/:merchantId/products/:productId",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        ":merchantId",
+                        "products",
+                        ":productId"
+                      ],
+                      "variable": [
+                        {
+                          "id": "b25c3d1f-811e-4359-a57b-910f1c919288",
+                          "key": "merchantId",
+                          "value": "<string>",
+                          "description": "(Required) "
+                        },
+                        {
+                          "id": "c91e372a-8b3c-4544-9c0a-e78eb79ba0bb",
+                          "key": "productId",
+                          "value": "<string>",
+                          "description": "(Required) "
+                        }
+                      ]
+                    },
+                    "description": "Deletes a product from the merchant account."
+                  },
+                  "response": [
+                    {
+                      "id": "2dcc1a02-5238-4b68-8d85-9c10433527cb",
+                      "name": "Product successfully deleted.",
+                      "originalRequest": {
+                        "method": "DELETE",
+                        "header": [],
+                        "url": {
+                          "raw": "{{baseUrl}}/:merchantId/products/:productId",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            ":merchantId",
+                            "products",
+                            ":productId"
+                          ],
+                          "variable": [
+                            {
+                              "key": "merchantId"
+                            },
+                            {
+                              "key": "productId"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "No Content",
+                      "code": 204,
+                      "_postman_previewlanguage": "text",
+                      "header": [],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": null,
+                      "createdAt": "2026-07-28T01:50:28.000Z",
+                      "updatedAt": "2026-07-28T01:50:28.000Z",
+                      "uid": "35240-2dcc1a02-5238-4b68-8d85-9c10433527cb"
+                    }
+                  ],
+                  "createdAt": "2026-07-28T01:50:28.000Z",
+                  "updatedAt": "2026-07-28T01:50:28.000Z",
+                  "uid": "35240-8a9902f5-6bf7-4ee0-911c-9b806a42dfed"
+                }
+              ],
+              "id": "619d8f1e-95cb-4d7b-a1d8-4d258bfbb465",
+              "createdAt": "2026-07-28T01:50:28.000Z",
+              "updatedAt": "2026-07-28T01:50:28.000Z",
+              "uid": "35240-619d8f1e-95cb-4d7b-a1d8-4d258bfbb465"
+            },
+            {
+              "name": "Google Content API for Shopping List Products",
+              "id": "cd74d1d7-b6d6-4095-bc0e-eeaef2db8d46",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/:merchantId/products?maxResults=<integer>&pageToken=<string>",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ":merchantId",
+                    "products"
+                  ],
+                  "query": [
+                    {
+                      "description": "Maximum number of products to return.",
+                      "key": "maxResults",
+                      "value": "<integer>"
+                    },
+                    {
+                      "description": "Token for pagination.",
+                      "key": "pageToken",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "id": "b218be44-5b34-4dee-b673-34bd1606d808",
+                      "key": "merchantId",
+                      "value": "<string>",
+                      "description": "(Required) The ID of the merchant account."
+                    }
+                  ]
+                },
+                "description": "Lists the products in the specified merchant account."
+              },
+              "response": [
+                {
+                  "id": "2d9ecc62-b21f-4a1f-b956-74ff72865472",
+                  "name": "Successful response with product list.",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/:merchantId/products?maxResults=<integer>&pageToken=<string>",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        ":merchantId",
+                        "products"
+                      ],
+                      "query": [
+                        {
+                          "description": "Maximum number of products to return.",
+                          "key": "maxResults",
+                          "value": "<integer>"
+                        },
+                        {
+                          "description": "Token for pagination.",
+                          "key": "pageToken",
+                          "value": "<string>"
+                        }
+                      ],
+                      "variable": [
+                        {
+                          "key": "merchantId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\n  \"kind\": \"<string>\",\n  \"nextPageToken\": \"<string>\",\n  \"resources\": [\n    {\n      \"id\": \"<string>\",\n      \"offerId\": \"<string>\",\n      \"title\": \"<string>\",\n      \"description\": \"<string>\",\n      \"link\": \"<uri>\",\n      \"imageLink\": \"<uri>\",\n      \"contentLanguage\": \"<string>\",\n      \"targetCountry\": \"<string>\",\n      \"channel\": \"local\",\n      \"availability\": \"<string>\",\n      \"condition\": \"used\",\n      \"price\": {\n        \"value\": \"<string>\",\n        \"currency\": \"<string>\"\n      },\n      \"brand\": \"<string>\",\n      \"gtin\": \"<string>\",\n      \"mpn\": \"<string>\",\n      \"googleProductCategory\": \"<string>\"\n    },\n    {\n      \"id\": \"<string>\",\n      \"offerId\": \"<string>\",\n      \"title\": \"<string>\",\n      \"description\": \"<string>\",\n      \"link\": \"<uri>\",\n      \"imageLink\": \"<uri>\",\n      \"contentLanguage\": \"<string>\",\n      \"targetCountry\": \"<string>\",\n      \"channel\": \"online\",\n      \"availability\": \"<string>\",\n      \"condition\": \"new\",\n      \"price\": {\n        \"value\": \"<string>\",\n        \"currency\": \"<string>\"\n      },\n      \"brand\": \"<string>\",\n      \"gtin\": \"<string>\",\n      \"mpn\": \"<string>\",\n      \"googleProductCategory\": \"<string>\"\n    }\n  ]\n}",
+                  "createdAt": "2026-07-28T01:50:28.000Z",
+                  "updatedAt": "2026-07-28T01:50:28.000Z",
+                  "uid": "35240-2d9ecc62-b21f-4a1f-b956-74ff72865472"
+                }
+              ],
+              "createdAt": "2026-07-28T01:50:28.000Z",
+              "updatedAt": "2026-07-28T01:50:28.000Z",
+              "uid": "35240-cd74d1d7-b6d6-4095-bc0e-eeaef2db8d46"
+            },
+            {
+              "name": "Google Content API for Shopping Insert Product",
+              "id": "b807765a-0c92-473e-9227-49bb37cbde08",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"<string>\",\n  \"offerId\": \"<string>\",\n  \"title\": \"<string>\",\n  \"description\": \"<string>\",\n  \"link\": \"<uri>\",\n  \"imageLink\": \"<uri>\",\n  \"contentLanguage\": \"<string>\",\n  \"targetCountry\": \"<string>\",\n  \"channel\": \"online\",\n  \"availability\": \"<string>\",\n  \"condition\": \"new\",\n  \"price\": {\n    \"value\": \"<string>\",\n    \"currency\": \"<string>\"\n  },\n  \"brand\": \"<string>\",\n  \"gtin\": \"<string>\",\n  \"mpn\": \"<string>\",\n  \"googleProductCategory\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/:merchantId/products",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ":merchantId",
+                    "products"
+                  ],
+                  "variable": [
+                    {
+                      "id": "e4d3d8a6-300d-4269-86b0-afb8be6e14fd",
+                      "key": "merchantId",
+                      "value": "<string>",
+                      "description": "(Required) The ID of the merchant account."
+                    }
+                  ]
+                },
+                "description": "Uploads a product to the specified merchant account."
+              },
+              "response": [
+                {
+                  "id": "cde40065-3d3f-4a15-93d0-c06b07aab2af",
+                  "name": "Successful product insertion.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"id\": \"<string>\",\n  \"offerId\": \"<string>\",\n  \"title\": \"<string>\",\n  \"description\": \"<string>\",\n  \"link\": \"<uri>\",\n  \"imageLink\": \"<uri>\",\n  \"contentLanguage\": \"<string>\",\n  \"targetCountry\": \"<string>\",\n  \"channel\": \"online\",\n  \"availability\": \"<string>\",\n  \"condition\": \"new\",\n  \"price\": {\n    \"value\": \"<string>\",\n    \"currency\": \"<string>\"\n  },\n  \"brand\": \"<string>\",\n  \"gtin\": \"<string>\",\n  \"mpn\": \"<string>\",\n  \"googleProductCategory\": \"<string>\"\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/:merchantId/products",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        ":merchantId",
+                        "products"
+                      ],
+                      "variable": [
+                        {
+                          "key": "merchantId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\n  \"id\": \"<string>\",\n  \"offerId\": \"<string>\",\n  \"title\": \"<string>\",\n  \"description\": \"<string>\",\n  \"link\": \"<uri>\",\n  \"imageLink\": \"<uri>\",\n  \"contentLanguage\": \"<string>\",\n  \"targetCountry\": \"<string>\",\n  \"channel\": \"online\",\n  \"availability\": \"<string>\",\n  \"condition\": \"new\",\n  \"price\": {\n    \"value\": \"<string>\",\n    \"currency\": \"<string>\"\n  },\n  \"brand\": \"<string>\",\n  \"gtin\": \"<string>\",\n  \"mpn\": \"<string>\",\n  \"googleProductCategory\": \"<string>\"\n}",
+                  "createdAt": "2026-07-28T01:50:28.000Z",
+                  "updatedAt": "2026-07-28T01:50:28.000Z",
+                  "uid": "35240-cde40065-3d3f-4a15-93d0-c06b07aab2af"
+                }
+              ],
+              "createdAt": "2026-07-28T01:50:28.000Z",
+              "updatedAt": "2026-07-28T01:50:28.000Z",
+              "uid": "35240-b807765a-0c92-473e-9227-49bb37cbde08"
+            }
+          ],
+          "id": "5dcb52b5-1955-494a-8c79-95a3a173d775",
+          "createdAt": "2026-07-28T01:50:28.000Z",
+          "updatedAt": "2026-07-28T01:50:28.000Z",
+          "uid": "35240-5dcb52b5-1955-494a-8c79-95a3a173d775"
+        }
+      ],
+      "id": "2de3991c-a2fe-4c7d-bc20-a56f658efcd6",
+      "createdAt": "2026-07-28T01:50:28.000Z",
+      "updatedAt": "2026-07-28T01:50:28.000Z",
+      "uid": "35240-2de3991c-a2fe-4c7d-bc20-a56f658efcd6"
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://shoppingcontent.googleapis.com/content/v2.1"
+    }
+  ]
+}

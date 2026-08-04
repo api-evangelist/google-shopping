@@ -1,0 +1,20 @@
+{
+  "provider": "google-shopping",
+  "sources": [
+    "google-shopping-accounts-api-openapi.yml",
+    "google-shopping-datafeeds-api-openapi.yml",
+    "google-shopping-orders-api-openapi.yml",
+    "google-shopping-products-api-openapi.yml"
+  ],
+  "outputs": [
+    "google-shopping-accounts-api-openapi.yml",
+    "google-shopping-datafeeds-api-openapi.yml",
+    "google-shopping-orders-api-openapi.yml",
+    "google-shopping-products-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
