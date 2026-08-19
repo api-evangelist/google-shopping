@@ -1,0 +1,120 @@
+{
+  "item": [
+    {
+      "id": "9987eb69-0d4c-48cf-81d9-a2d968dd2b0a",
+      "name": "Datafeeds",
+      "description": {
+        "content": "Manage data feeds",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "7bd7a6b2-94ef-49e5-ba7d-248fe105c58b",
+          "name": "Google Content API for Shopping List Datafeeds",
+          "request": {
+            "name": "Google Content API for Shopping List Datafeeds",
+            "description": {
+              "content": "Lists the data feeds in the specified merchant account.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ":merchantId",
+                "datafeeds"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "merchantId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "34bbe053-ea8b-44c2-93d5-caae9c1d86fd",
+              "name": "Successful response with datafeed list.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ":merchantId",
+                    "datafeeds"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "merchantId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"kind\": \"string\",\n  \"nextPageToken\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://shoppingcontent.googleapis.com/content/v2.1",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "acd0f333-7d0e-43ee-a6ee-a590fddbd163",
+    "name": "Google Content API for Shopping Accounts Datafeeds API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Content API for Shopping allows apps to interact directly with the Google Merchant Center platform, enabling management of product listings, account information, data feeds, inventory, orders, and promotions. It provides programmatic access to create, update, and delete products, manage shipping and tax settings, handle order workflows, and access reporting data.\n\nContact Support:\n Name: Google Shopping",
+      "type": "text/plain"
+    }
+  }
+}

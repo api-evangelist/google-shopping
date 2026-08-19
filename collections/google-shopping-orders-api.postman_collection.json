@@ -1,0 +1,120 @@
+{
+  "item": [
+    {
+      "id": "5bb80702-dd86-4481-9587-772d0222fdd3",
+      "name": "Orders",
+      "description": {
+        "content": "Manage orders",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "443e4149-6d1a-4622-ab42-5f54878e5098",
+          "name": "Google Content API for Shopping List Orders",
+          "request": {
+            "name": "Google Content API for Shopping List Orders",
+            "description": {
+              "content": "Lists the orders in the specified merchant account.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ":merchantId",
+                "orders"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "merchantId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "beb2746c-47a2-49fa-b95f-e53f839518dd",
+              "name": "Successful response with order list.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ":merchantId",
+                    "orders"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "merchantId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"kind\": \"string\",\n  \"nextPageToken\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://shoppingcontent.googleapis.com/content/v2.1",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "d9776a76-3d0d-427c-8e27-1831fd163a2b",
+    "name": "Google Content API for Shopping Accounts Orders API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Content API for Shopping allows apps to interact directly with the Google Merchant Center platform, enabling management of product listings, account information, data feeds, inventory, orders, and promotions. It provides programmatic access to create, update, and delete products, manage shipping and tax settings, handle order workflows, and access reporting data.\n\nContact Support:\n Name: Google Shopping",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Google Content API for Shopping Accounts Orders API",
+    "version": "2.1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Orders",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Google Content API for Shopping List Orders",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://shoppingcontent.googleapis.com/content/v2.1/:merchantId/orders",
+            "params": [
+              {
+                "name": "merchantId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Lists the orders in the specified merchant account."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
