@@ -37,6 +37,8 @@ apis:
   humanURL: https://developers.google.com/shopping-content
   baseURL: https://shoppingcontent.googleapis.com/content/v2.1
   tags:
+  - Account
+  tags_raw:
   - Accounts
   properties:
   - type: OpenAPI
@@ -59,6 +61,8 @@ apis:
   humanURL: https://developers.google.com/shopping-content
   baseURL: https://shoppingcontent.googleapis.com/content/v2.1
   tags:
+  - Data Feeds
+  tags_raw:
   - Datafeeds
   properties:
   - type: OpenAPI
@@ -81,6 +85,8 @@ apis:
   humanURL: https://developers.google.com/shopping-content
   baseURL: https://shoppingcontent.googleapis.com/content/v2.1
   tags:
+  - Order
+  tags_raw:
   - Orders
   properties:
   - type: OpenAPI
@@ -103,6 +109,8 @@ apis:
   humanURL: https://developers.google.com/shopping-content
   baseURL: https://shoppingcontent.googleapis.com/content/v2.1
   tags:
+  - Product
+  tags_raw:
   - Products
   properties:
   - type: OpenAPI
