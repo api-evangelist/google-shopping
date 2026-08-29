@@ -1,0 +1,26 @@
+slug: google-shopping
+provider: Google Content API for Shopping
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Retail & Consumer Goods
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 1
+edges:
+- tag: Products
+  spec_file: google-shopping-products-api-openapi.yml
+  capability_id: BC-2370.30
+  capability_id_l1: BC-2370
+  capability_name: Channel Syndication Management
+  confidence: 0.7
+  evidence: Insert Product / Get Product / Delete Product; "management of product listings" ... "programmatic
+    access to create, update, and delete products"
+  reason: CRUD over product listings published to the Google Shopping channel — publication of product
+    data to an external channel/marketplace feed. Could also be read as item master data management, hence
+    0.7.

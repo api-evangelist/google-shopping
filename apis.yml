@@ -140,6 +140,9 @@ apis:
     url: >-
       https://raw.githubusercontent.com/api-evangelist/google-shopping/refs/heads/main/json-ld/google-shopping.jsonld
 common:
+  - type: CapabilityMap
+    url: capabilities/google-shopping-capability-edges.yml
+    name: Google Content API for Shopping Business Capability Map
   - type: PostmanWorkspace
     url: https://www.postman.com/kinlaneapi/google-content-api-for-shopping/overview
   - type: AgenticAccess
