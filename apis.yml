@@ -73,7 +73,7 @@ apis:
   humanURL: https://developers.google.com/shopping-content
   baseURL: https://shoppingcontent.googleapis.com/content/v2.1
   tags:
-  - Datafeeds
+  - Data Feeds
   tags_raw:
   - Datafeeds
   properties:
