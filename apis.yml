@@ -140,6 +140,8 @@ apis:
     url: >-
       https://raw.githubusercontent.com/api-evangelist/google-shopping/refs/heads/main/json-ld/google-shopping.jsonld
 common:
+  - type: Website
+    url: https://www.google.com/
   - type: CapabilityMap
     url: capabilities/google-shopping-capability-edges.yml
     name: Google Content API for Shopping Business Capability Map
@@ -176,3 +178,5 @@ common:
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
+x-parent: google
+x-relationship: product
