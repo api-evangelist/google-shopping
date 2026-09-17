@@ -67,30 +67,6 @@ apis:
   - type: JSONLD
     url: >-
       https://raw.githubusercontent.com/api-evangelist/google-shopping/refs/heads/main/json-ld/google-shopping.jsonld
-- aid: google-shopping:google-shopping-datafeeds-api
-  name: Google Content API for Shopping Datafeeds API
-  description: Manage data feeds
-  humanURL: https://developers.google.com/shopping-content
-  baseURL: https://shoppingcontent.googleapis.com/content/v2.1
-  tags:
-  - Data Feeds
-  tags_raw:
-  - Datafeeds
-  properties:
-  - type: OpenAPI
-    url: openapi/google-shopping-datafeeds-api-openapi.yml
-  - type: Documentation
-    url: https://developers.google.com/shopping-content/reference/rest
-  - type: Authentication
-    url: https://developers.google.com/shopping-content/guides/how-tos/authorizing
-  - type: GettingStarted
-    url: https://developers.google.com/shopping-content/guides/quickstart
-  - type: JSONSchema
-    url: >-
-      https://raw.githubusercontent.com/api-evangelist/google-shopping/refs/heads/main/json-schema/google-shopping.json
-  - type: JSONLD
-    url: >-
-      https://raw.githubusercontent.com/api-evangelist/google-shopping/refs/heads/main/json-ld/google-shopping.jsonld
 - aid: google-shopping:google-shopping-orders-api
   name: Google Content API for Shopping Orders API
   description: Manage orders
@@ -127,6 +103,28 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/google-shopping-products-api-openapi.yml
+  - type: Documentation
+    url: https://developers.google.com/shopping-content/reference/rest
+  - type: Authentication
+    url: https://developers.google.com/shopping-content/guides/how-tos/authorizing
+  - type: GettingStarted
+    url: https://developers.google.com/shopping-content/guides/quickstart
+  - type: JSONSchema
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/google-shopping/refs/heads/main/json-schema/google-shopping.json
+  - type: JSONLD
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/google-shopping/refs/heads/main/json-ld/google-shopping.jsonld
+- aid: google-shopping:google-shopping-data-feeds-api
+  name: Google Content API for Shopping Data Feeds API
+  description: Manage data feeds
+  humanURL: https://developers.google.com/shopping-content
+  baseURL: https://shoppingcontent.googleapis.com/content/v2.1
+  tags:
+  - Data Feeds
+  properties:
+  - type: OpenAPI
+    url: openapi/google-shopping-data-feeds-api-openapi.yml
   - type: Documentation
     url: https://developers.google.com/shopping-content/reference/rest
   - type: Authentication
