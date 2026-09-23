@@ -1,6 +1,6 @@
 openapi: 3.2.0
 info:
-  title: Google Content API for Shopping Accounts Datafeeds API
+  title: Google Content API for Shopping Datafeeds API
   description: The Content API for Shopping allows apps to interact directly with the Google Merchant Center platform, enabling management of product listings, account information, data feeds, inventory, orders, and promotions. It provides programmatic access to create, update, and delete products, manage shipping and tax settings, handle order workflows, and access reporting data.
   version: 2.1.0
   contact:
@@ -13,7 +13,7 @@ servers:
 - url: https://shoppingcontent.googleapis.com/content/v2.1
   description: Content API for Shopping v2.1 Server
 tags:
-- name: Datafeeds
+- name: Data Feeds
   description: Manage data feeds
 paths:
   /{merchantId}/datafeeds:
@@ -22,7 +22,7 @@ paths:
       summary: Google Content API for Shopping List Datafeeds
       description: Lists the data feeds in the specified merchant account.
       tags:
-      - Datafeeds
+      - Data Feeds
       parameters:
       - name: merchantId
         in: path

@@ -1,10 +1,7 @@
 {
   "provider": "google-shopping",
   "sources": [
-    "google-shopping-accounts-api-openapi.yml",
-    "google-shopping-datafeeds-api-openapi.yml",
-    "google-shopping-orders-api-openapi.yml",
-    "google-shopping-products-api-openapi.yml"
+    "_original/openapi.yml"
   ],
   "outputs": [
     "google-shopping-accounts-api-openapi.yml",
@@ -12,15 +9,21 @@
     "google-shopping-orders-api-openapi.yml",
     "google-shopping-products-api-openapi.yml"
   ],
-  "archived": [],
+  "archived": [
+    "deleted 1 superseded output(s) from the previous generation"
+  ],
   "errors": [],
   "warnings": [],
   "notes": [
-    "google-shopping-accounts-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "google-shopping-datafeeds-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "google-shopping-orders-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "google-shopping-products-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "apis.yml register: already-registered"
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "superseded outputs removed: google-shopping-data-feeds-api-openapi.yml",
+    "apis.yml register: written (+1 apis, 4 total)"
   ],
-  "skipped": []
+  "skipped": [
+    "google-shopping-accounts-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "google-shopping-data-feeds-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "google-shopping-orders-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "google-shopping-products-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
