@@ -120,6 +120,26 @@ paths:
           description: Product successfully deleted.
 components:
   schemas:
+    ProductsListResponse:
+      type: object
+      properties:
+        kind:
+          type: string
+        nextPageToken:
+          type: string
+        resources:
+          type: array
+          items:
+            $ref: '#/components/schemas/Product'
+    Price:
+      type: object
+      properties:
+        value:
+          type: string
+          description: The price value.
+        currency:
+          type: string
+          description: The currency code (ISO 4217).
     Product:
       type: object
       properties:
@@ -178,26 +198,6 @@ components:
         googleProductCategory:
           type: string
           description: Google product category.
-    Price:
-      type: object
-      properties:
-        value:
-          type: string
-          description: The price value.
-        currency:
-          type: string
-          description: The currency code (ISO 4217).
-    ProductsListResponse:
-      type: object
-      properties:
-        kind:
-          type: string
-        nextPageToken:
-          type: string
-        resources:
-          type: array
-          items:
-            $ref: '#/components/schemas/Product'
 externalDocs:
   description: Content API for Shopping Documentation
   url: https://developers.google.com/shopping-content/guides/quickstart
