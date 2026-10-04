@@ -121,8 +121,6 @@ apis:
   humanURL: https://developers.google.com/shopping-content
   baseURL: https://shoppingcontent.googleapis.com/content/v2.1
   tags:
-  - Data Feed
-  tags_raw:
   - Data Feeds
   properties:
   - type: OpenAPI
