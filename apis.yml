@@ -138,6 +138,12 @@ apis:
     url: >-
       https://raw.githubusercontent.com/api-evangelist/google-shopping/refs/heads/main/json-ld/google-shopping.jsonld
 common:
+  - type: Plans
+    url: plans/google-shopping-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/google-shopping-rate-limits.yml
+  - type: FinOps
+    url: finops/google-shopping-finops.yml
   - type: Website
     url: https://www.google.com/
   - type: CapabilityMap
