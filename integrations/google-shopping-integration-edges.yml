@@ -1,0 +1,34 @@
+generated: '2026-10-12'
+method: searched
+source:
+- https://monid.ai/tools/google-shopping
+checked:
+- https://composio.dev/toolkits/google-shopping
+- https://monid.ai/tools/google-shopping
+- https://n8n.io/integrations/google-shopping/
+- https://zapier.com/apps/google-content-api-for-shopping/integrations
+- https://zapier.com/apps/google-shopping/integrations
+summary: null
+marketplace_apps:
+- marketplace: monid
+  channel: agent-gateway
+  app: google-shopping
+  url: https://monid.ai/tools/google-shopping
+  identity: slug
+edges:
+- partner_name: anyapi
+  partner: anyapi
+  partner_match: domain
+  type: contract
+  channel: partner-built
+  relationship: processor-connection
+  direction: partner-built
+  evidence: https://github.com/api-evangelist/anyapi/blob/main/openapi/anyapi-google-ads-api-openapi.yml
+  contract_reference:
+    repo: anyapi
+    spec_file: anyapi-google-ads-api-openapi.yml
+    value: google_shopping
+    property: content.platform
+    detected_by: detect-payment-method-edges.py
+    detected: '2026-10-12'
+templates: []
