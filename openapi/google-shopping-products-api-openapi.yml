@@ -120,17 +120,6 @@ paths:
           description: Product successfully deleted.
 components:
   schemas:
-    ProductsListResponse:
-      type: object
-      properties:
-        kind:
-          type: string
-        nextPageToken:
-          type: string
-        resources:
-          type: array
-          items:
-            $ref: '#/components/schemas/Product'
     Product:
       type: object
       properties:
@@ -189,6 +178,17 @@ components:
         googleProductCategory:
           type: string
           description: Google product category.
+    ProductsListResponse:
+      type: object
+      properties:
+        kind:
+          type: string
+        nextPageToken:
+          type: string
+        resources:
+          type: array
+          items:
+            $ref: '#/components/schemas/Product'
     Price:
       type: object
       properties:
